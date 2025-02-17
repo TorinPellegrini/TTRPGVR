@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{D0D41768-4BEA-7E0B-A2EB-D184FA4D3F2A}",
+	"EngineAssociation": "{4EECFE16-48C2-882D-23EF-F78A7FF3459D}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -22,7 +22,7 @@
 				"Win64",
 				"Linux",
 				"Android",
-				"HoloLens"
+				"VisionOS"
 			]
 		},
 		{
@@ -32,7 +32,8 @@
 				"Win64",
 				"Linux",
 				"Android",
-				"HoloLens"
+				"Mac",
+				"IOS"
 			]
 		},
 		{
@@ -46,7 +47,8 @@
 				"Win64",
 				"Linux",
 				"Android",
-				"HoloLens"
+				"Mac",
+				"IOS"
 			]
 		},
 		{
@@ -65,7 +67,7 @@
 				"Win64",
 				"Linux",
 				"Android",
-				"HoloLens"
+				"VisionOS"
 			]
 		},
 		{

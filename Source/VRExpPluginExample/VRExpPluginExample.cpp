@@ -3,3 +3,5 @@
 #include "VRExpPluginExample.h"
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, VRExpPluginExample, "VRExpPluginExample" );
+
+DEFINE_LOG_CATEGORY(TTRPGLog);
