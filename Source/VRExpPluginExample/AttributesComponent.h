@@ -83,10 +83,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	FAttributeChangeResult ApplyHealthDelta(AActor* HitInstigator, float Value);
 
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	bool CheckIfAttackHit(int rollResult);
+
 	const FAttribute& GetHealthAttribute() const;
 
 	UPROPERTY(BlueprintAssignable, Category = "Attributes")
 	FOnAttributeChanged OnHealthAttributeChanged;
+
+	const FAttribute& GetArmorAttribute() const;
+
 
 protected:
 	// Called when the game starts
@@ -94,5 +100,8 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
 	FAttribute HealthAttribute;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	FAttribute ArmorAttribute;
 		
 };

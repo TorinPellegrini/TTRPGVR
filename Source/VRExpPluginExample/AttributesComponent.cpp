@@ -4,6 +4,8 @@
 #include "AttributesComponent.h"
 #include "VRExpPluginExample.h"
 
+
+
 // Called when the game starts
 void UAttributesComponent::BeginPlay()
 {
@@ -86,12 +88,30 @@ FAttributeChangeResult UAttributesComponent::ApplyHealthDelta(AActor* HitInstiga
 	return FAttributeChangeResult::MakeFailed(FString("Unknown Reason"));
 }
 
+bool UAttributesComponent::CheckIfAttackHit(int rollResult)
+{
+	int armorClass = ArmorAttribute.CurrentValue;
+	if(rollResult < armorClass)
+	{
+		return false;
+	}
+	if(rollResult >= armorClass)
+	{
+		return true;
+	}
+
+	return false;
+}
+
 const FAttribute& UAttributesComponent::GetHealthAttribute() const
 {
 	return HealthAttribute;
 }
 
-
+const FAttribute& UAttributesComponent::GetArmorAttribute() const
+{
+	return ArmorAttribute;
+}
 
 
 
