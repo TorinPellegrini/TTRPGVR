@@ -86,12 +86,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	bool CheckIfAttackHit(int rollResult);
 
-	const FAttribute& GetHealthAttribute() const;
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	static void SetAttributeValue(UPARAM(ref)FAttribute& Attribute, int NewValue);
 
 	UPROPERTY(BlueprintAssignable, Category = "Attributes")
 	FOnAttributeChanged OnHealthAttributeChanged;
 
 	const FAttribute& GetArmorAttribute() const;
+
+	const FAttribute& GetHealthAttribute() const;
 
 
 protected:
@@ -103,5 +106,23 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
 	FAttribute ArmorAttribute;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	FAttribute StrengthAttribute;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	FAttribute DexterityAttribute;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	FAttribute ConstitutionAttribute;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	FAttribute CharismaAttribute;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	FAttribute IntelligenceAttribute;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Attributes")
+	FAttribute WisdomAttribute;
 		
 };

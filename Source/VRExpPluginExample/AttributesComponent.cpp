@@ -103,6 +103,13 @@ bool UAttributesComponent::CheckIfAttackHit(int rollResult)
 	return false;
 }
 
+void UAttributesComponent::SetAttributeValue(FAttribute& Attribute, int NewValue)
+{
+	Attribute.BaseValue = NewValue;
+	Attribute.MaxValue = NewValue;
+	Attribute.CurrentValue = NewValue;
+}
+
 const FAttribute& UAttributesComponent::GetHealthAttribute() const
 {
 	return HealthAttribute;
