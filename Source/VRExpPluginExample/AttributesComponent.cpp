@@ -110,6 +110,11 @@ void UAttributesComponent::SetAttributeValue(FAttribute& Attribute, int NewValue
 	Attribute.CurrentValue = NewValue;
 }
 
+float UAttributesComponent::GetAttributeMax(FAttribute& Attribute)
+{
+	return Attribute.MaxValue;
+}
+
 const FAttribute& UAttributesComponent::GetHealthAttribute() const
 {
 	return HealthAttribute;

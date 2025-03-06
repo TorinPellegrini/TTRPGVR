@@ -89,6 +89,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	static void SetAttributeValue(UPARAM(ref)FAttribute& Attribute, int NewValue);
 
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	static float GetAttributeMax(UPARAM(ref)FAttribute& Attribute);
+
 	UPROPERTY(BlueprintAssignable, Category = "Attributes")
 	FOnAttributeChanged OnHealthAttributeChanged;
 
