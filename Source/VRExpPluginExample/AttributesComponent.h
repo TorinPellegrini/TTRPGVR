@@ -92,6 +92,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	static float GetAttributeMax(UPARAM(ref)FAttribute& Attribute);
 
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 	UPROPERTY(BlueprintAssignable, Category = "Attributes")
 	FOnAttributeChanged OnHealthAttributeChanged;
 
@@ -104,28 +106,28 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute HealthAttribute;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute ArmorAttribute;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute StrengthAttribute;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute DexterityAttribute;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute ConstitutionAttribute;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute CharismaAttribute;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute IntelligenceAttribute;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Attributes")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Replicated, Category="Attributes")
 	FAttribute WisdomAttribute;
 		
 };

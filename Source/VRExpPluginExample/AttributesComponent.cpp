@@ -3,7 +3,7 @@
 
 #include "AttributesComponent.h"
 #include "VRExpPluginExample.h"
-
+#include "Net/UnrealNetwork.h"
 
 
 // Called when the game starts
@@ -113,6 +113,20 @@ void UAttributesComponent::SetAttributeValue(FAttribute& Attribute, int NewValue
 float UAttributesComponent::GetAttributeMax(FAttribute& Attribute)
 {
 	return Attribute.MaxValue;
+}
+
+void UAttributesComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ThisClass, HealthAttribute);
+	DOREPLIFETIME(ThisClass, ArmorAttribute);
+	DOREPLIFETIME(ThisClass, StrengthAttribute);
+	DOREPLIFETIME(ThisClass, DexterityAttribute);
+	DOREPLIFETIME(ThisClass, ConstitutionAttribute);
+	DOREPLIFETIME(ThisClass, CharismaAttribute);
+	DOREPLIFETIME(ThisClass, IntelligenceAttribute);
+	DOREPLIFETIME(ThisClass, WisdomAttribute);
 }
 
 const FAttribute& UAttributesComponent::GetHealthAttribute() const
