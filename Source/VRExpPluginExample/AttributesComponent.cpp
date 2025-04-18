@@ -134,6 +134,36 @@ const FAttribute& UAttributesComponent::GetHealthAttribute() const
 	return HealthAttribute;
 }
 
+const FAttribute& UAttributesComponent::GetConstitutionAttribute() const
+{
+	return ConstitutionAttribute;
+}
+
+const FAttribute& UAttributesComponent::GetDexterityAttribute() const
+{
+	return DexterityAttribute;
+}
+
+const FAttribute& UAttributesComponent::GetCharismaAttribute() const
+{
+	return CharismaAttribute;
+}
+
+const FAttribute& UAttributesComponent::GetStrengthAttribute() const
+{
+	return StrengthAttribute;
+}
+
+const FAttribute& UAttributesComponent::GetWisdomAttribute() const
+{
+	return WisdomAttribute;
+}
+
+const FAttribute& UAttributesComponent::GetIntelligenceAttribute() const
+{
+	return IntelligenceAttribute;
+}
+
 const FAttribute& UAttributesComponent::GetArmorAttribute() const
 {
 	return ArmorAttribute;

@@ -101,6 +101,13 @@ public:
 
 	const FAttribute& GetHealthAttribute() const;
 
+	const FAttribute& GetConstitutionAttribute() const;
+	const FAttribute& GetDexterityAttribute() const;
+	const FAttribute& GetCharismaAttribute() const;
+	const FAttribute& GetStrengthAttribute() const;
+	const FAttribute& GetWisdomAttribute() const;
+	const FAttribute& GetIntelligenceAttribute() const;
+
 
 protected:
 	// Called when the game starts
