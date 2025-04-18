@@ -4,7 +4,7 @@
 #include "BaseUI.h"
 
 
-
+//Takes in player's attributes and fills the text in on the UI
 void UBaseUI::FillGeneralAttributes(UAttributesComponent* PlayerAttributes, FText CharacterName, FText PlayerMovementSpeed)
 {
 	PlayerHealth->SetText(GetTextFromAttributeValue(PlayerAttributes->GetHealthAttribute().CurrentValue));;
@@ -21,7 +21,7 @@ void UBaseUI::FillGeneralAttributes(UAttributesComponent* PlayerAttributes, FTex
 	WisdomNumber->SetText(GetTextFromAttributeValue(PlayerAttributes->GetWisdomAttribute().CurrentValue));
 }
 
-
+//Fill in Attack Text Variables from an array of text structs
 void UBaseUI::FillAttacks(TArray<FAttackTextVariables> AttackTextVariables)
 {
 	AttackRollText1->SetText(AttackTextVariables[0].AttackRollText);
